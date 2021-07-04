@@ -1,0 +1,230 @@
+<!doctype html>
+<title>..:: Dona Maria Gourmet ::..</title>
+<style>
+body {
+	display: grid;
+	grid-template-areas:
+		"header header"
+		"nav article"
+		"ads article"
+		"ads footer";
+	grid-template-rows: 100px 1fr 120px 70px;
+	grid-template-columns: 20% 1fr;
+	grid-row-gap: 10px;
+	grid-column-gap: 10px;
+	height: 100vh;
+	margin: 0;
+}
+
+p{
+	color: #C71585;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+h4 {
+	font-size: 14px;
+	color: #C71585;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+ 
+div {
+	padding: 1.2em;
+	background: #FFFFFF;
+	padding-top: 0px;
+	align: center;
+}
+
+article, nav {
+	padding: 1.2em;
+	background: #FFFFFF;
+}
+
+header, footer  {
+	padding: 0.5em;
+	background: #FFC0CB;
+}
+
+#pageHeader {
+	grid-area: header;  
+}
+
+#pageFooter {
+	grid-area: footer;
+	padding-top: 0px;
+}
+
+#mainArticle {
+	grid-area: article;
+}
+
+#mainNav{
+	grid-area: nav;
+	padding-top: 0px;
+	padding-left: 0px;
+}
+
+#siteAds {
+	grid-area: ads;
+	position: absolute;
+	left: -2px;
+	top: 582px;
+	width: 299px;
+	padding-top: 0px;
+	padding-left: 0px;
+	height: 178px;
+}
+
+/* Stack the layout on small devices/viewports. */
+
+@media all and (max-width: 575px){
+body {
+	grid-template-areas:
+	"header"
+	"article"
+	"ads"
+	"nav"
+	"footer";
+	grid-template-rows: 80px 1fr 70px 1fr 70px;
+	grid-template-columns: 1fr;
+	}
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 315px;
+}
+
+ul li {
+	position: relative;
+}
+
+li ul {
+	position: absolute;
+	left: 149px;
+	top: 0;
+	display: none;
+}
+
+ul li a {
+	display: block;
+	text-decoration: none;
+	color: #C71585;
+	padding: 13.5px;
+	font-family: Arial;
+	font-size: 15px;
+	background-image: url("fundo.jpg");}
+
+ul li a:hover{
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	font-family: Arial;
+	font-size: 15px;
+	background-image: url("fundo1.jpg");
+}
+
+#features ul {
+    margin: 0px 0;
+    list-style-type: none;
+	padding-top: 0px;
+	width: 950px;
+}
+#features ul li {
+    width: 210px;
+    padding-top: 0px;
+    float: right;
+    margin-right: 10px;
+    text-align: center;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #FFFFFF;
+}
+
+</style>
+<body>
+	<header id="pageHeader"><img src="LOGO.png">
+			<table align="right">
+				<tr>
+					<td><img src="redes.png"></td>
+					<td><input type="text" name="s" class="query live-search-query" value placeholder="Pesquisa..." autocomplete="off">
+					<input type="submit" value="OK">
+					</td>
+				</tr>
+			</table>
+	</header>
+	<article id="mainArticle">
+	<center>
+		<div id="features">
+				<ul>
+					<li class="feature-1"><img src="foto1.jpg">
+					<h4>Salmão com crosta <br/>crocante e risoto</h4>
+					<p>Selecionamos o salmão com crosta<br/> crocante com risoto, pois essa é <br/>uma verdadeira delícia 2 em 1!</p>
+					</li>
+					<li class="feature-2"><img src="foto2.jpg">
+					<h4>Lasanha doce</h4>
+					<p>Essa lasanha doce tem dois <br/>chocolates especiais, com camadas <br/>de puro sabor!</p>
+					</li>
+					<li class="feature-3"><img src="foto3.jpg">
+					<h4>Risoto de bacalhau</h4>
+					<p>Para um jantar sofisticado, nada <br/>melhor que um risoto de bacalhau!</p>
+					</li>
+					<li class="feature-4"><img src="foto4.jpg">
+					<h4>Cheesecake de frutas <br/>vermelhas</h4>
+					<p>Esse cheesecake de frutas <br/>vermelhas é uma sobremesa de <br/>encher os olhos!</p>
+					</li>
+					<li class="feature-5"><img src="foto5.jpg">
+					<h4>Medalhão de filé<br/>mignon com molho de <br/>azeitonas</h4>
+					<p>Quer se tornar um verdadeiro chef? <br/>Então prepare um delicioso <br/>medalhão com molho de azeitonas!</p>
+					</li>
+					<li class="feature-6"><img src="foto6.jpg">
+					<h4>Mousse de café com <br/>chantilly</h4>
+					<p>O mousse de café com chantilly é <br/>de surpreender qualquer paladar!</p>
+					</li>
+					<li class="feature-7"><img src="foto7.jpg">
+					<h4>Salada de arroz com <br/>camarão</h4>
+					<p>Quem disse que a salada não <br/>teria aquele toque gourmet? <br/>Confirme com essa salada de <br/>arroz com camarão!</p>
+					</li>
+					<li class="feature-8"><img src="foto8.jpg">	
+					<h4>Brownie de creme de <br/>avelã com nozes</h4>
+					<p>Para fechar qualquer refeição com <br/>sucesso, nada melhor que um <br/>brownie de creme de avelã com <br/>nozes: sobremesa impecável.</p>
+					</li>
+				</ul>
+		</div>
+	</center>
+	</article>
+	
+	<nav id="mainNav">
+	<ul id="nav">
+		<li><a href="#">Aves</a></li>
+		<li><a href="#">Carnes</a></li>
+		<li><a href="#">Do Mar</a></li>
+		<li><a href="#">Entradas</a></li>
+		<li><a href="#">Light</a></li>
+		<li><a href="#">Massas</a></li>
+		<li><a href="#">Molhos</a></li>
+		<li><a href="#">Prato Principal</a></li>
+		<li><a href="#">Sobremesas</a></li>
+		<li><a href="#">Vegetariano</a></li>
+	</ul>
+	</nav>
+	<div id="siteAds"><img src="ADifood.gif">
+	</div>
+	<footer id="pageFooter">
+		<table align="center" width="900px" height="20px">
+				<tr>
+					<td valign="top"><p><b>Endereço:</b><br/>
+					R. Ribeirão Preto, 75 - Jardim Pedroso, <br/>
+					Mauá - SP, 09370-530</td>
+					<td valign="top"><p><b>Contato:</b><br/>
+					Telefone: (11) 4513-4672<br/>
+					E-mail: atendimento@donamariagourmet.com.br</td>
+					<td valign="middle"><p>© Copyright 2019 - Todos os direitos reservados.</p></td>
+				</tr>
+			</table>
+	</footer>
+	</body>
